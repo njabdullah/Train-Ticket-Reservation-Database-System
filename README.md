@@ -4,6 +4,13 @@
 
 Repository ini berisi proyek pembuatan database dalam pemesanan tiket kereta api. Proyek ini dikembangkan oleh kelompok 2 kelas Manajemen Basis Data F 2023 sebagai bagian dari final projek mata kuliah Manajemen Basis Data.
 
+| Anggota                            |
+|------------------------------------|
+| Abdullah Nasih Jasir               |
+| Rayhan Almer Kusumah               |
+| I Gusti Ngurah Ervan Juli Ardana   |
+| Made Nanda Wija Vahindra           |
+
 ## Deskripsi Proyek
 
 Proyek Sistem Database Reservasi Tiket Kereta Api adalah sebuah database yang dibuat untuk memudahkan proses pemesanan tiket kereta api. Database ini memiliki beberapa fitur penting, seperti penyimpanan informasi akun pengguna, kemampuan memesan makanan, pilihan tempat duduk, dan fungsi-fungsi umum dalam pemesanan tiket kereta api.
