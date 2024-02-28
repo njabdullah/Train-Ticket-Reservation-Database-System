@@ -1,50 +1,56 @@
-# Train-Ticket-Reservation-Database-System
+# Train Ticket Reservation Database System
+### Repository Description
 
-## Deskripsi Repository
+This repository contains a project for creating a database system for train ticket reservations. The project was developed by Group 2 of the Database Management F 2023 class as part of the final project for the Database Management course.
 
-Repository ini berisi proyek pembuatan database dalam pemesanan tiket kereta api. Proyek ini dikembangkan oleh kelompok 2 kelas Manajemen Basis Data F 2023 sebagai bagian dari final projek mata kuliah Manajemen Basis Data.
+---
 
-| Anggota                            |
-|------------------------------------|
-| Abdullah Nasih Jasir               |
-| Rayhan Almer Kusumah               |
-| I Gusti Ngurah Ervan Juli Ardana   |
-| Made Nanda Wija Vahindra           |
+| Members                           |
+|----------------------------------|
+| Abdullah Nasih Jasir             |
+| Rayhan Almer Kusumah             |
+| I Gusti Ngurah Ervan Juli Ardana |
+| Made Nanda Wija Vahindra         |
 
-## Deskripsi Proyek
+---
+### Project Description
 
-Proyek Sistem Database Reservasi Tiket Kereta Api adalah sebuah database yang dibuat untuk memudahkan proses pemesanan tiket kereta api. Database ini memiliki beberapa fitur penting, seperti penyimpanan informasi akun pengguna, kemampuan memesan makanan, pilihan tempat duduk, dan fungsi-fungsi umum dalam pemesanan tiket kereta api.
+The Train Ticket Reservation Database System project is a database designed to facilitate the process of booking train tickets. This database has several important features, such as storing user account information, the ability to order food, seat selection options, and common functions in train ticket booking.
 
-Dalam database ini, terdapat 8 entitas yang memiliki peran masing-masing:
-1. Entitas "Pemesan" bertujuan untuk menyimpan informasi akun pengguna yang melakukan pemesanan.
-2. Entitas "Kereta" digunakan untuk menyimpan data tentang kereta yang dapat dipesan, termasuk nama kereta, jam keberangkatan, dan stasiun awal.
-3. Entitas "Menu_makanan" berfungsi untuk menyimpan daftar menu makanan beserta harga masing-masing menu pada setiap kereta.
-4. Entitas "Transaksi_pemesanan" digunakan untuk mencatat semua transaksi pemesanan kereta yang dilakukan oleh pemesan.
-5. Entitas "Feedback" digunakan untuk menyimpan feedback yang diberikan oleh setiap pemesan.
-6. Entitas "TransaksiDetail_penumpang" bertujuan untuk menyimpan informasi lengkap mengenai setiap penumpang yang bukan pemesan.
-7. Entitas "Tempat_duduk" digunakan untuk mengelola dan memantau ketersediaan tempat duduk pada setiap perjalanan kereta.
-8. Entitas "Transaksi_makanan" berfungsi untuk mencatat semua informasi transaksi pemesanan makanan yang dilakukan oleh pemesan.
+In this database, there are 8 entities, each with its own role:
+1. The "Customer" entity aims to store information about user accounts making reservations.
+2. The "Train" entity is used to store data about trains that can be booked, including train names, departure times, and initial stations.
+3. The "Food_Menu" entity is used to store a list of food menus along with their prices for each train.
+4. The "Reservation_Transaction" entity is used to record all train booking transactions made by customers.
+5. The "Feedback" entity is used to store feedback provided by each customer.
+6. The "Passenger_Detail_Transaction" entity aims to store complete information about each passenger who is not the customer.
+7. The "Seat" entity is used to manage and monitor the availability of seats on each train journey.
+8. The "Food_Transaction" entity is used to record all information on food ordering transactions made by customers.
 
-## Fitur
+---
+### Features
 
-Proyek ini menggunakan SQL untuk mengelola dan memanipulasi basis data. Berikut adalah beberapa fitur utama yang diimplementasikan menggunakan SQL:
+This project uses SQL to manage and manipulate the database. Here are some of the main features implemented using SQL:
 
-1. Sequence: Dalam struktur database ini, terdapat penggunaan penomoran otomatis (sequences) yang telah diatur. Hal ini memungkinkan penghasilan ID yang unik secara otomatis ketika terdapat penambahan atau perubahan data dalam database.
-2. Fungsi "Tempat_Duduk_Func()": Fungsi ini dirancang untuk secara otomatis mengatur penomoran kursi yang tersedia pada setiap kereta. Dengan demikian, pengguna tidak perlu melakukan input manual terhadap penomoran tersebut.
-3. Fungsi "Available_Func()": Fungsi ini digunakan untuk memberikan pesan jika kursi yang ingin dipesan telah tidak tersedia. Fungsi ini berperan penting dalam memberikan informasi yang akurat mengenai ketersediaan tempat duduk kepada pengguna.
-4. Fungsi "update_available_tempat_duduk()": Fungsi ini bertujuan untuk mengubah status ketersediaan kursi pada entitas tempat_duduk setelah kursi tersebut berhasil dipesan. Hal ini memastikan bahwa informasi ketersediaan tempat duduk tetap terkini dalam database.
-5. Trigger: Terdapat beberapa trigger yang telah diimplementasikan dalam database ini. Misalnya, trigger untuk menjalankan fungsi "tempat_duduk_func()" ketika terjadi perubahan pada entitas kereta, trigger untuk menjalankan fungsi "available_func()" saat terdapat perubahan pada entitas transaksipenumpang_detail, dan trigger untuk menjalankan fungsi "update_available_tempat_duduk()" ketika terdapat perubahan pada entitas transaksipenumpang_detail.
-6. Pengindeksan (Indexing):
-CREATE INDEX idx_nama ON kereta (nama_kereta);
-CREATE INDEX idx_tanggal_berangkat ON kereta (tanggal_pemberangkatan);
-Digunakan untuk mempercepat proses pencarian berdasarkan nama kereta dan tanggal pemberangkatan. Indeks ini membantu mengoptimalkan waktu yang diperlukan dalam proses pencarian data.
-7. Tampilan (View): Dalam database ini, telah dibuat beberapa tampilan tabel (view) yang memungkinkan pengguna untuk mendapatkan informasi yang diinginkan tanpa mengubah entitas yang telah ada. Beberapa contoh tampilan tabel tersebut antara lain adalah omset setiap kereta, ketersediaan kursi, pemesanan makanan, dan daftar kereta yang paling diminati oleh pelanggan.
+1. Sequence: In this database structure, there is the use of automatic numbering (sequences) that has been set up. This allows for the automatic generation of unique IDs when there is an addition or change of data in the database.
+2. "Seat_Arrangement_Func()" Function: This function is designed to automatically arrange the numbering of available seats on each train. Thus, users do not need to manually input this numbering.
+3. "Available_Func()" Function: This function is used to provide a message if the seat the user wants to book is unavailable. This function plays an important role in providing accurate information about seat availability to users.
+4. "update_available_seat()" Function: This function aims to change the availability status of seats in the seat entity after the seat has been successfully booked. This ensures that seat availability information remains up-to-date in the database.
+5. Triggers: There are several triggers implemented in this database. For example, triggers to execute the "seat_arrangement_func()" function when there is a change in the train entity, triggers to execute the "available_func()" function when there is a change in the passenger_detail_transaction entity, and triggers to execute the "update_available_seat()" function when there is a change in the passenger_detail_transaction entity.
+6. Indexing:
+   ```
+   CREATE INDEX idx_name ON train (train_name);
+   CREATE INDEX idx_departure_date ON train (departure_date);
+   ```
+   Used to speed up search processes based on train name and departure date. These indexes help optimize the time required for data search.
+7. Views: In this database, several table views have been created, allowing users to obtain desired information without altering existing entities. Some examples of these table views include revenue for each train, seat availability, food orders, and a list of trains most preferred by customers.
 
-## Instalasi dan Penggunaan
+---
+### Installation and Usage
 
-Clone repository ini ke mesin lokal Anda.
+Clone this repository to your local machine.
    ```
    git clone https://github.com/njabdullah/Train-Ticket-Reservation-Database-System.git
    ```
 
-Setelah Anda mengikuti langkah di atas, Anda dapat menjalankan proyek dan mulai menggunakan fitur-fitur SQL yang disediakan.
+After following the above steps, you can run the project and start using the provided SQL features.
