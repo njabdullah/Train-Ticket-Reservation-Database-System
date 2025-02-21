@@ -5,14 +5,6 @@ This repository contains a project for creating a database system for train tick
 
 ---
 
-| Members                           |
-|----------------------------------|
-| Abdullah Nasih Jasir             |
-| Rayhan Almer Kusumah             |
-| I Gusti Ngurah Ervan Juli Ardana |
-| Made Nanda Wija Vahindra         |
-
----
 ### Project Description
 
 The Train Ticket Reservation Database System project is a database designed to facilitate the process of booking train tickets. This database has several important features, such as storing user account information, the ability to order food, seat selection options, and common functions in train ticket booking.
